@@ -2,7 +2,7 @@
 import { NavLink } from "react-router-dom";
 import { BiSolidSun } from "react-icons/bi";
 import { BiSolidMoon } from "react-icons/bi";
-
+import PropTypes from 'prop-types';
 const navlinks = [
     {
         id: 1,
@@ -26,7 +26,6 @@ const navlinks = [
     },
 ]
 const Navber = ({theme, setTheme}) => {
-
 
     return (
         <nav className="shadow-md bg-white dark:bg-dark dark:text-white duration-300">
@@ -61,3 +60,8 @@ const Navber = ({theme, setTheme}) => {
 };
 
 export default Navber;
+
+Navber.propTypes ={
+    theme:PropTypes.object.isRequired,
+    setTheme:PropTypes.object.isRequired,
+}

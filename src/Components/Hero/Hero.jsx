@@ -1,6 +1,7 @@
 // import React from 'react';
 import carPng from "../../assets/car.png"
 import car2Png from "../../assets/banner-car.png"
+import PropTypes from 'prop-types';
 
 const Hero = ({theme}) => {
     return (
@@ -26,3 +27,7 @@ const Hero = ({theme}) => {
 };
 
 export default Hero;
+
+Hero.propTypes ={
+    theme:PropTypes.object.isRequired
+}
