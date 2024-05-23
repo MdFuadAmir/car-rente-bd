@@ -12,7 +12,6 @@ const About = () => {
                     {/* writen section */}
                     <div className="order-1 sm:order-2 space-y-5 sm:pr-32">
                         <p className="text-3xl font-serif font-bold">About Us</p>
-                        <h1 className="text-5xl font-semibold lg:text-7xl font-serif">Car Rente</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates architecto velit ab quidem .
                         </p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates architecto velit ab quidem .
