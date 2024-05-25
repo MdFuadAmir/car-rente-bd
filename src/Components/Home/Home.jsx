@@ -3,6 +3,7 @@ import Navber from "../Navber/Navber";
 import Hero from '../Hero/Hero';
 import About from '../About/About';
 import Services from '../Services/Services';
+import CarList from '../CarList/CarList';
 
 const Home = () => {
     const [theme, setTheme] = React.useState(localStorage.getItem("theme") ?  localStorage.getItem("theme") : "light");
@@ -24,6 +25,7 @@ const Home = () => {
             <Hero theme={theme}/>
             <About theme={theme}/>
             <Services />
+            <CarList />
             
             
         </div>
