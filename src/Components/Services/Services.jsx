@@ -37,7 +37,7 @@ const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {
                         skillData.map((skill) => (
-                            <div key={skill.id} className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary duration-500 hover:text-black rounded-lg">
+                            <div key={skill.id} className="card text-center group space-y-3 sm:space-y-6 p-4 sm:py-16 bg-dark hover:bg-primary duration-500 hover:text-black text-white rounded-lg">
                                 <div className="grid place-items-center">
                                     {skill.icon}
                                 </div>

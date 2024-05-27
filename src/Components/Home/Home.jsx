@@ -5,11 +5,13 @@ import About from '../About/About';
 import Services from '../Services/Services';
 import CarList from '../CarList/CarList';
 import Review from '../Review/Review';
+import AppStoreBanner from '../AppStoreBanner/AppStoreBanner';
 
 const Home = () => {
     const [theme, setTheme] = React.useState(localStorage.getItem("theme") ?  localStorage.getItem("theme") : "light");
-    const element = document.documentElement;
+    
     useEffect(() =>{
+        const element = document.documentElement;
         if(theme == "dark"){
             element.classList.add("dark");
             localStorage.setItem("theme", "dark");
@@ -18,7 +20,6 @@ const Home = () => {
             element.classList.remove("dark");
             localStorage.setItem("theme", "light");
         }
-
     },[theme])
     return (
         <div>
@@ -28,6 +29,7 @@ const Home = () => {
             <Services />
             <CarList />
             <Review />
+            <AppStoreBanner />
         </div>
     );
 };
