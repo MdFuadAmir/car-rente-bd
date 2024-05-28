@@ -6,6 +6,7 @@ import Services from '../Services/Services';
 import CarList from '../CarList/CarList';
 import Review from '../Review/Review';
 import AppStoreBanner from '../AppStoreBanner/AppStoreBanner';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     const [theme, setTheme] = React.useState(localStorage.getItem("theme") ?  localStorage.getItem("theme") : "light");
@@ -30,6 +31,7 @@ const Home = () => {
             <CarList />
             <Review />
             <AppStoreBanner />
+            <Contact />
         </div>
     );
 };
