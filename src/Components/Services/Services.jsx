@@ -29,7 +29,7 @@ const skillData =[
 
 const Services = () => {
     return (
-        <div className="dark:bg-black dark:text-white sm:min-h-[600px] sm:grid sm:place-items-center">
+        <div className="dark:bg-black dark:text-white sm:min-h-[600px] sm:grid sm:place-items-center py-8">
             <div className="container">
                 <div className="mb-12">
                     <h1 className="text-3xl font-semibold text-center font-serif sm:text-4xl">Why Choose Us</h1>

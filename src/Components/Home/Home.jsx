@@ -7,6 +7,7 @@ import CarList from '../CarList/CarList';
 import Review from '../Review/Review';
 import AppStoreBanner from '../AppStoreBanner/AppStoreBanner';
 import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     const [theme, setTheme] = React.useState(localStorage.getItem("theme") ?  localStorage.getItem("theme") : "light");
@@ -32,6 +33,7 @@ const Home = () => {
             <Review />
             <AppStoreBanner />
             <Contact />
+            <Footer />
         </div>
     );
 };

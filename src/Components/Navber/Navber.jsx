@@ -2,8 +2,14 @@
 import { NavLink } from "react-router-dom";
 import { BiSolidSun } from "react-icons/bi";
 import { BiSolidMoon } from "react-icons/bi";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { HiMenuAlt1 } from "react-icons/hi";
+
 import PropTypes from 'prop-types';
-const navlinks = [
+import ResponsiveMenue from "../ResponsivMenue/ResponsiveMenue";
+import { useState } from "react";
+
+export const navlinks = [
     {
         id: 1,
         name: "Home",
@@ -26,9 +32,15 @@ const navlinks = [
     },
 ]
 const Navber = ({theme, setTheme}) => {
+    const [showMenue, setshowMenue] = useState(false);
+
+    const toggleMenue = () =>{
+        setshowMenue(!showMenue);
+    }
 
     return (
-        <nav className="shadow-md bg-white dark:bg-dark dark:text-white duration-300">
+        <nav className="shadow-md bg-white dark:bg-dark 
+        dark:text-white duration-300">
             <div className="container">
                 <div className="flex justify-between items-center">
                     {/* name */}
@@ -45,6 +57,7 @@ const Navber = ({theme, setTheme}) => {
                             }
                         </ul>
                     </div>
+                    <div className="flex items-center gap-4">
                     {/* dark mode */}
                     <div>
                         {
@@ -53,13 +66,25 @@ const Navber = ({theme, setTheme}) => {
                             )
                         }
                     </div>
+                    {/* menue */}
+                    <div className="md:hidden">
+                    {
+                        showMenue?(<HiMenuAlt3 onClick={toggleMenue} size={30} className=" cursor-pointer transition-all"/>): (<HiMenuAlt1 onClick={toggleMenue} size={30} className=" cursor-pointer transition-all"/>)
+                    }
+                    </div>
+
+                    </div>
                 </div>
             </div>
-        </nav>
+                    <div>
+                        <ResponsiveMenue showMenue={showMenue}/>
+                    </div>
+            </nav>
     );
 };
 
 export default Navber;
+
 
 Navber.propTypes ={
     theme:PropTypes.object.isRequired,
